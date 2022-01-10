@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 
 setup(name='httprobe',
-      version='0.0.0',
+      version='0.0.3',
       description='Probes a list of targets and returns details about responses',
       author='midnight_repo',
       author_email='midnight_repo@protonmail.com',

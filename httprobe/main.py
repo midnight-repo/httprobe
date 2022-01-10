@@ -134,9 +134,8 @@ class Requester:
             of.close()
         print(table)
 
-
-
-if __name__ == '__main__':
+def run():
+    
     argparser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
     argparser.add_argument('-H', '--header', nargs='+', action='extend', help='Header to include in the request')
     argparser.add_argument('-L', '--follow-redirects', action='store_true', default=False, help='Follow redirections')
@@ -151,7 +150,6 @@ if __name__ == '__main__':
     args = argparser.parse_args()
     
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
     if args.list:
         for line in [line.strip() for line in sys.stdin.readlines()]:
             print(https(line))
@@ -159,5 +157,11 @@ if __name__ == '__main__':
         r = Requester()
         r.run()
         r.show_results()
+
+if __name__ == '__main__':
+    run()
+
+
+
 
 
