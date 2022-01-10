@@ -1,4 +1,4 @@
-This is just a remastered version of httprobe. 
+This is just a bit more verbose version of httprobe fully written in python3. 
 
 # Installation
     pip install httprobe
